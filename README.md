@@ -1,2 +1,2 @@
 # thegoodcompanysg.dev
-official repo of thegoodcompany-sst's website
+thegoodcompany-sst's official website
