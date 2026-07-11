@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Get started with TAVAttendance</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --text: #e7e9ee;
+    --muted: #9aa1ad;
+    --accent: #5b8cff;
+    --border: #262a33;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    color: var(--muted);
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+  h2 {
+    font-size: 1.15rem;
+    margin: 0 0 4px;
+  }
+  .step {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 20px;
+  }
+  .step-num {
+    display: inline-block;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .platform-tabs {
+    display: flex;
+    gap: 8px;
+    margin: 14px 0 12px;
+  }
+  .platform-tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .platform-tab.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .platform-panel { display: none; }
+  .platform-panel.active { display: block; }
+  ol, ul { padding-left: 22px; margin: 8px 0; }
+  li { margin-bottom: 6px; }
+  code {
+    background: #10131a;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 0.88em;
+    word-break: break-all;
+  }
+  a { color: var(--accent); }
+  .note {
+    background: #1c1f26;
+    border-left: 3px solid var(--accent);
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+  .warn {
+    border-left-color: #e0a340;
+  }
+  footer {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 40px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Get started with TAVAttendance</h1>
+  <p class="subtitle">A step-by-step guide to installing TAVAttendance on an iPad using AltStore, since it isn't distributed through the App Store.</p>
+
+  <div class="step">
+    <div class="step-num">Step 1</div>
+    <h2>Install AltServer on your computer</h2>
+    <p>AltServer runs on a Mac or PC and is what installs AltStore onto your iPad over USB or Wi-Fi.</p>
+    <div class="platform-tabs">
+      <button class="platform-tab active" data-target="win">Windows</button>
+      <button class="platform-tab" data-target="mac">macOS</button>
+    </div>
+    <div class="platform-panel active" id="win">
+      <ol>
+        <li>Install <a href="https://www.apple.com/itunes/download/win64" target="_blank" rel="noopener">iTunes</a> and <a href="https://updates.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe" target="_blank" rel="noopener">iCloud</a> directly from Apple &mdash; not the Microsoft Store versions.</li>
+        <li>Download and run the <a href="https://faq.altstore.io/altstore-classic/how-to-install-altstore-windows" target="_blank" rel="noopener">AltServer installer for Windows</a>, following the official guide.</li>
+        <li>Search for &ldquo;AltServer&rdquo; in the Start menu and run it as administrator; allow any network access prompts.</li>
+        <li>Connect the iPad by USB, unlock it, and tap &ldquo;Trust&rdquo; if prompted.</li>
+        <li>Open iTunes, select the iPad, and enable &ldquo;Wi-Fi sync.&rdquo;</li>
+      </ol>
+    </div>
+    <div class="platform-panel" id="mac">
+      <ol>
+        <li>Download <a href="https://faq.altstore.io/altstore-classic/how-to-install-altstore-macos" target="_blank" rel="noopener">AltServer for macOS</a> and drag it into <code>/Applications</code>, then launch it.</li>
+        <li>Connect the iPad by USB, unlock it, and tap &ldquo;Trust&rdquo; if prompted.</li>
+        <li>In Finder, select the iPad in the sidebar and enable &ldquo;Show this iPad when on Wi-Fi.&rdquo;</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">Step 2</div>
+    <h2>Install AltStore on the iPad</h2>
+    <ol>
+      <li>Click the AltServer icon (menu bar on macOS, taskbar on Windows) &rarr; <strong>Install AltStore</strong> &rarr; choose your iPad.</li>
+      <li>Enter your Apple ID email and password when asked.</li>
+      <li>Wait for the &ldquo;Installation Successful&rdquo; notification. The AltStore app will appear on the iPad's home screen.</li>
+    </ol>
+    <div class="note">Your Apple ID and password are sent directly to Apple to sign the app &mdash; not to AltStore or thegoodcompany.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">Step 3</div>
+    <h2>Trust AltStore on the iPad</h2>
+    <ol>
+      <li>On the iPad, go to <strong>Settings &rarr; General &rarr; VPN &amp; Device Management</strong>, select your Apple ID, and tap <strong>Trust</strong>.</li>
+      <li>If on iOS 16 or later, also enable <strong>Settings &rarr; Privacy &amp; Security &rarr; Developer Mode</strong>, then restart the iPad when prompted.</li>
+    </ol>
+  </div>
+
+  <div class="step">
+    <div class="step-num">Step 4</div>
+    <h2>Install TAVAttendance</h2>
+    <ol>
+      <li>Open the <strong>AltStore</strong> app on the iPad.</li>
+      <li>Go to the <strong>Browse</strong> tab &rarr; the sources icon (top-left) &rarr; <strong>Add Source</strong>.</li>
+      <li>Enter this source URL: <code>https://dash.thegoodcompanysg.dev/altstore.json</code></li>
+      <li>Open the new source, find <strong>TAVAttendance</strong>, and tap <strong>Install</strong>. Confirm with your Apple ID if asked again.</li>
+    </ol>
+  </div>
+
+  <div class="step">
+    <div class="step-num">Keep it working</div>
+    <h2>Weekly refresh</h2>
+    <p>Apple's free developer signing expires every 7 days. To keep TAVAttendance working:</p>
+    <ul>
+      <li>Keep AltServer installed and running on a computer on the same Wi-Fi network as the iPad.</li>
+      <li>Open the AltStore app on the iPad at least once a week &mdash; it will refresh automatically in the background if AltServer is reachable.</li>
+    </ul>
+    <div class="note warn">If TAVAttendance stops opening, it likely expired &mdash; open AltStore on the iPad with AltServer running nearby to refresh it.</div>
+  </div>
+
+  <footer>thegoodcompany &middot; built for TAVA</footer>
+</div>
+
+<script>
+  document.querySelectorAll('.platform-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.platform-tab').forEach(function (t) { t.classList.remove('active'); });
+      document.querySelectorAll('.platform-panel').forEach(function (p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.target).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
